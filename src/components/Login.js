@@ -3,10 +3,12 @@ import {GoogleOutlined, FacebookOutlined} from '@ant-design/icons'
 import "firebase/app"
 import {auth} from '../firebase'
 import firebase from 'firebase/app'
+import Particle from './Particle'
 
 const Login = () => {
     return(
         <div id='login-page'>
+            <Particle />
             <div id='login-card'>
                 <h2>Welcome to ChitChat!</h2>
                 <div
@@ -17,12 +19,12 @@ const Login = () => {
                 </div>
                 <br/><br/>
 
-                <div
+                {/*<div
                     className='login-button facebook'
                     onClick={() => auth.signInWithRedirect(new firebase.auth.FacebookAuthProvider())}
                     >
                     <FacebookOutlined/> Sign In with Facebook
-                </div>
+                </div>*/}
             </div>
         </div>
     )
